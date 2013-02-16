@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testRepoServer", "testRepo\testRepoServer\testRepoServer.vcxproj", "{30256A3D-2463-416D-A071-67EC4BA1782D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "testRepoClient", "testRepo\testRepoClient\testRepo.vcxproj", "{A4A88294-2AA1-4D2B-9D77-7A28EF21030C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30256A3D-2463-416D-A071-67EC4BA1782D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{30256A3D-2463-416D-A071-67EC4BA1782D}.Debug|Win32.Build.0 = Debug|Win32
+		{30256A3D-2463-416D-A071-67EC4BA1782D}.Release|Win32.ActiveCfg = Release|Win32
+		{30256A3D-2463-416D-A071-67EC4BA1782D}.Release|Win32.Build.0 = Release|Win32
+		{A4A88294-2AA1-4D2B-9D77-7A28EF21030C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4A88294-2AA1-4D2B-9D77-7A28EF21030C}.Debug|Win32.Build.0 = Debug|Win32
+		{A4A88294-2AA1-4D2B-9D77-7A28EF21030C}.Release|Win32.ActiveCfg = Release|Win32
+		{A4A88294-2AA1-4D2B-9D77-7A28EF21030C}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
