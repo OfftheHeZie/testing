@@ -1,12 +1,18 @@
 #include "common.h"
-#include "UDPclient.h"
+#include "./client/UDPclient.h"
 
 int main(int argc, char *argv[])
 {
 	int sockfd;
+	int i;
 	char *name;
 	char *port;
-	struct sockaddr_in * dest;	
+	char * received;
+	char send[256];
+	char testMessages[5][256] = {"<loadavg/>", "<echo>Hello World!</echo>", "<echo></echo>", "", "<echo>Bye Bye World...<echo>"};
+	struct sockaddr_in * dest;
+	char expectedResponses[5][256] = {"", "<reply>Hello World!</reply>", "<reply></reply>", 
+				"<error>unknown format</error>", "<error>unknown format</error>"};
 
 	if(argc != 3)
 	{
@@ -17,13 +23,6 @@ int main(int argc, char *argv[])
 	name = argv[1];
 	port = argv[2];
 
-	char * received;
-	char send[256];
-
-	char testMessages[5][256] = {"<loadavg/>", "<echo>Hello World!</echo>", "<echo></echo>", "", "<echo>Bye Bye World...<echo>"};
-	char expectedResponses[5][256] = {"", "<reply>Hello World!</reply>", "<reply></reply>", 
-				"<error>unknown format</error>", "<error>unknown format</error>"};
-	int i;
 	srand(time(NULL));
 
 	// 1. Check for loadavg and the print at the same time
@@ -81,3 +80,4 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+
